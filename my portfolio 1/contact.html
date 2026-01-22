@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ====== NAVBAR ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffd5;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00ffd5;
+}
+
+/* ====== CONTACT SECTION ====== */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 60px;
+}
+
+.contact-card {
+    width: 650px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid #00ffd5;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 255, 213, 0.2);
+    text-align: center;
+    animation: popUp 1s ease;
+}
+
+.contact-card h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-card h1 span {
+    color: #00ffd5;
+}
+
+.contact-card p {
+    color: #dcdcdc;
+    margin-bottom: 30px;
+}
+
+/* ====== FORM ====== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #00ffd5;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    resize: none;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #dcdcdc;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.inputBox input:focus + span,
+.inputBox textarea:focus + span,
+.inputBox input:valid + span,
+.inputBox textarea:valid + span {
+    top: -10px;
+    color: #00ffd5;
+    font-size: 12px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    background: #00ffd5;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+}
+
+/* ====== SOCIAL ICONS ====== */
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    color: #00ffd5;
+    margin: 0 10px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+/* ====== ANIMATION ====== */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== MOBILE RESPONSIVE ====== */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .contact-card {
+        width: 100%;
+        padding: 25px;
+    }
+}
+
+    </style>
+
+<header>
+    <h2 class="logo">Portfolio</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skill.html">Skills</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <div class="contact-card">
+        <h1>Let's <span> Connect</span></h1>
+        <p>Feel free to contact me for projects, internships, or just say hello.</p>
+
+        <form>
+            <div class="inputBox">
+                <input type="text" required>
+                <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required>
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <textarea required></textarea>
+                <span>Your Message</span>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>

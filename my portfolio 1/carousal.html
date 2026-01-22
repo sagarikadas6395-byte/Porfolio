@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> My Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+}
+
+/* Carousel */
+.carousel-container {
+    width: 90%;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 1s ease;
+}
+
+/* Card with animated border */
+.card {
+    position: relative;
+    padding: 6px;
+    border-radius: 25px;
+    background: linear-gradient(270deg, #ff512f, #dd2476, #1fa2ff);
+    background-size: 600% 600%;
+    animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card img {
+    width: 400px;        
+    height: 500px;       
+    border-radius: 20px;
+    object-fit: contain; 
+    background: #000;    
+    display: block;
+}
+
+/* Glow effect */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    filter: blur(18px);
+    background: inherit;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+    </style>
+
+<div class="carousel-container">
+    <div class="carousel-track">
+        <div class="card"><img src="./PIC 1.jpeg"></div>
+        <div class="card"><img src="./PIC 2.jpeg"></div>
+        <div class="card"><img src="./PIC 3.jpeg"></div>
+        <div class="card"><img src="./PIC 4.jpeg"></div>
+        <div class="card"><img src="./PIC 5.jpeg"></div>
+        <div class="card"><img src="./PIC 6.jpeg"></div>
+        <div class="card"><img src="./PIC 7.jpeg"></div>
+        <div class="card"><img src="./PIC 8.jpeg"></div>
+        <div class="card"><img src="./PIC 9.jpeg"></div>
+        <div class="card"><img src="./PIC 10.jpeg"></div>
+    </div>
+</div>
+
+<script>
+    const track = document.querySelector(".carousel-track");
+const cards = document.querySelectorAll(".card");
+
+let index = 0;
+const speed = 1800;
+
+function moveCarousel() {
+    index++;
+    if (index > cards.length - 3) {
+        index = 0;
+    }
+    track.style.transform = `translateX(${-index * 360}px)`;
+}
+
+setInterval(moveCarousel, speed);
+
+</script>
+</body>
+</html>

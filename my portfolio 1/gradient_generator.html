@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Generator</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+  }
+  
+  .container {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .box {
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+    background: linear-gradient(#000000, #ffffff);
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #555;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎨 Random Gradient Generator</h1>
+
+    <div class="box" id="gradientBox"></div>
+
+    <button id="btn">Generate Gradient</button>
+
+    <p id="code">linear-gradient(#000000, #ffffff)</p>
+  </div>
+
+  <script>
+    const box = document.getElementById("gradientBox");
+const btn = document.getElementById("btn");
+const code = document.getElementById("code");
+
+function getRGB(){
+    let r= Math.floor(Math.random()*256);
+    let g= Math.floor(Math.random()*256);
+    let b= Math.floor(Math.random()*256);
+
+    return `rgb(${r},${g},${b})`
+    
+}
+
+btn.addEventListener("click",()=>{
+    let color1=getRGB();
+    let color2=getRGB();
+    let color3=getRGB();
+    
+
+    let newRanCol=`linear-gradient(${color1},${color2},${color3})`
+
+    code.innerText= newRanCol
+    box.style.background= newRanCol
+})
+  </script>
+</body>
+</html>

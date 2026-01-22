@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: #ffffff;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0b1220;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #3cffc6;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cfd6f0;
+    font-size: 16px;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: #3cffc6;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3cffc6;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+    padding: 80px 8%;
+}
+
+.skills-section h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.skills-section h1 span {
+    color: #3cffc6;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.skill-box {
+    padding: 25px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(60,255,198,0.3);
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(60,255,198,0.15);
+}
+
+.skill-box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 30px rgba(60,255,198,0.5);
+}
+
+/* ===== EDUCATION ===== */
+.education h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #3cffc6;
+}
+
+.edu-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(60,255,198,0.3);
+    box-shadow: 0 0 20px rgba(60,255,198,0.15);
+    transition: 0.4s;
+}
+
+.edu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(60,255,198,0.4);
+}
+
+.edu-card h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.edu-card p {
+    font-size: 15px;
+    color: #cfd6f0;
+}
+
+.edu-card span {
+    font-size: 14px;
+    color: #9aa4d1;
+}
+
+.edu-card strong {
+    color: #3cffc6;
+    font-size: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-section h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .edu-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+    </style>
+
+<header>
+    <h2 class="logo">Portfolio</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="skills-section">
+
+    <h1>Skills & <span>Technologies</span></h1>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+        <div class="skill-box">C (Basic)</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">Tailwind CSS</div>
+    </div>
+
+    <!-- Education -->
+    <div class="education">
+        <h2>Education</h2>
+
+        <div class="edu-card">
+            <div>
+                <h3>10th Class</h3>
+                <p>Govt Girls High School UNIT-8</p>
+                <span>2020 – 2021 | Bhubaneswar</span>
+            </div>
+            <strong>score:77%</strong>
+        </div>
+
+        <div class="edu-card">
+            <div>
+                <h3>12th Class</h3>
+                <p>Maharshi Higher secondary School of Natural Law</p>
+                <span>2022 – 2024 | Bhubaneswar</span>
+            </div>
+            <strong>score:61%</strong>
+        </div>
+
+        <div class="edu-card">
+            <div>
+                <h3>Graduation(Currently Pursuing)</h3>
+                <p>Lakhshya Institute Of Technology</p>
+                <span>2022 – Present | Bhubaneswar</span>
+            </div>
+            <strong>Ongoing</strong>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

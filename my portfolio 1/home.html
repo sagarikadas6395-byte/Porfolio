@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffd5;
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00ffd5;
+}
+
+/* ---------- Home Section ---------- */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+}
+
+/* Left text */
+.home-info {
+    width: 50%;
+    animation: slideLeft 1.5s ease;
+}
+
+.home-info h1 {
+    font-size: 45px;
+    color: #00ffd5;
+}
+
+.home-info h2 {
+    margin: 10px 0;
+    font-size: 26px;
+}
+
+.home-info p {
+    margin: 15px 0 30px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Button */
+.btn {
+    padding: 12px 25px;
+    background: #00ffd5;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+}
+
+/* Social icons */
+.sci a {
+    color: #00ffd5;
+    font-size: 22px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.sci a:hover {
+    color: #ffffff;
+}
+
+/* ---------- Right Image ---------- */
+.home-img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;   /* RIGHT ALIGN */
+    animation: slideRight 1.5s ease;
+}
+
+.profile-img {
+    width: 320px;
+    border-radius: 20px;
+    border: 4px solid #00ffd5;
+    box-shadow: 0 0 25px #00ffd5;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ---------- Animations ---------- */
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+</style>
+<body>
+    
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+    <ul>
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+
+    <div class="bars-animation"></div>
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+
+
+    <section class="home">
+        <div class="home-info">
+            <h1>HELLO!!</h1>
+            <h2>
+                <span style="--i:1;">I'm Sagarika Das.</span>
+            </h2>
+            <p>Bsc Computer Science student at Lakhshya Institue Of Technology who loves building simple,clean,and user-friendly websites. Actively developing my technical & soft skills to prepare future opertunities.</p>
+            <div class="btn-sci">
+                <a href="resume.html" class="btn">My Resume</a>
+                <div class="sci">
+                    <a href="https://github.com/sagarikadas6395-byte"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/sagarika-das-54731134b/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.youtube.com/@Sagarikad76"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.instagram.com/sagaariiikaaa?igsh=MThlNTdscmUweGEwYw=="><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src = "home.jpeg" alt="profile" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html> 
+ 

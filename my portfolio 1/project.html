@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Portfolio</title>
+     <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: #ffffff;
+}
+
+/* ===== NAVBAR FIX ===== */
+header {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0b1220;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #3cffc6;
+}
+
+nav {
+    display: flex;            
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cfd6f0;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #3cffc6;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #3cffc6;
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* ===== WORK SECTION ===== */
+.work-section {
+    padding: 80px 8%;
+}
+
+.work-header {
+    margin-bottom: 60px;
+}
+
+.work-title {
+    font-size: 42px;
+}
+
+.work-subtitle {
+    color: #9aa4d1;
+    margin-top: 10px;
+}
+
+/* ===== PROJECT CARDS ===== */
+#cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 18px;
+    border: 1px solid rgba(60,255,198,0.3);
+    box-shadow: 0 0 20px rgba(60,255,198,0.15);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(60,255,198,0.45);
+}
+
+.card__content {
+    padding: 25px;
+}
+
+.card__number {
+    color: #3cffc6;
+    font-weight: 600;
+}
+
+.card__title {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.card__description {
+    font-size: 15px;
+    color: #cfd6f0;
+    margin-bottom: 15px;
+}
+
+.card__tags span {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 4px 6px 0 0;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #3cffc6;
+    color: #3cffc6;
+}
+
+/* ===== IMAGE ===== */
+.card__image {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card__image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .work-title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .work-subtitle {
+        text-align: center;
+    }
+}
+
+
+    </style>
+      <!-- Navbar -->
+    <header>
+        <h2 class="logo">Portfolio</h2>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html"class="active">Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="work" class="work-section">
+        <div class="work-header">
+            <h2 class="work-title">Selected Work</h2>
+            <p class="work-subtitle">Projects I've crafted with passion and precision</p>
+        </div>
+        
+        <ul id="cards">
+            <!-- Project 1 -->
+            <li class="card" id="card_1">
+                <div class="card__content">
+                    <div class="card__info">
+                        <span class="card__number">01</span>
+                        <h3 class="card__title">Age Calculator</h3>
+                        <p class="card__description">A simple tool that calculates a user's age based on their date of birth.</p>
+                        <div class="card__tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </div>
+                    </div>
+                    <figure class="card__image">
+                        <img src="./age calculator.png" alt="Age Calculator">
+                        <div class="project-button">
+                            <a href="./age_calculator.html" class="btn" target="_blank">View Page</a>
+                        </div>
+                    </figure>
+                </div>
+            </li>
+
+            <!-- Project 2 -->
+            <li class="card" id="card_2">
+                <div class="card__content">
+                    <div class="card__info">
+                        <span class="card__number">02</span>
+                        <h3 class="card__title">Caraousal</h3>
+                        <p class="card__description">A Caraousal of my pictures using html ,css & js.</p>
+                        <div class="card__tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <figure class="card__image">
+                        <img src="./carausal.jpeg" alt="MY caraousal">
+                        <div class="project-button">
+                            <a href="./carousal.html" class="btn" target="_blank">View Page</a>
+                        </div>
+                    </figure>
+                </div>
+            </li>
+
+            <!-- Project 3 -->
+            <li class="card" id="card_3">
+                <div class="card__content">
+                    <div class="card__info">
+                        <span class="card__number">03</span>
+                        <h3 class="card__title">Digital Clock</h3>
+                        <p class="card__description">A real-time clock tool that shows the current time with an easy-to-read display.</p>
+                        <div class="card__tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <figure class="card__image">
+                        <img src="./didital_clock.png" alt="Digital Clock">
+                        <div class="project-button">
+                            <a href="./digital_clock.html" class="btn" target="_blank">View Page</a>
+                        </div>
+                    </figure>
+                </div>
+            </li>
+
+            <!-- Project 4 -->
+            <li class="card" id="card_4">
+                <div class="card__content">
+                    <div class="card__info">
+                        <span class="card__number">04</span>
+                        <h3 class="card__title">Color Changing App</h3>
+                        <p class="card__description">A user-friendly app that allows users to switch between different colors instantly.</p>
+                        <div class="card__tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <figure class="card__image">
+                        <img src="./color changing app.png" alt="Color changing app">
+                        <div class="project-button">
+                            <a href="./gradient_generator.html" class="btn" target="_blank">View Page</a>
+                        </div>
+                    </figure>
+                </div>
+            </li>
+             
+                    </figure>
+                </div>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
